@@ -13,11 +13,6 @@ const Dashboard = () => {
         navigate('/'); // Redirect to login if not authenticated
       }
     }, [navigate]);
-    const handleLogout = () => {
-        // Clear authentication status
-        localStorage.removeItem('isAuthenticated');
-        navigate('/'); // Redirect to login after logout
-      };
   return (
     <>
      <Helmet>
@@ -30,12 +25,6 @@ const Dashboard = () => {
       <h1 className="text-2xl font-bold">Dashboard Overview</h1>
       <p className="mt-4">This is the dashboard content.</p>
     </div>
-    <button
-          className="bg-red-500 text-white py-2 px-4 rounded mt-10"
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
         </Layout>
     </>
   );
